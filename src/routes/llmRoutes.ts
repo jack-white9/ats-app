@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express";
+import express from "express";
 import llmController from "../controllers/llmController";
 
 const router = express.Router();
