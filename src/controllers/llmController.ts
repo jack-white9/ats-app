@@ -1,5 +1,10 @@
 import { Request, Response } from "express";
-import { Configuration, OpenAIApi } from "openai";
+import {
+  Configuration,
+  OpenAIApi,
+  ChatCompletionRequestMessageRoleEnum,
+} from "openai";
+import { prompt } from "../utils/prompt";
 
 const llmController = async (req: Request, res: Response): Promise<void> => {
   const configuration = new Configuration({
@@ -14,7 +19,10 @@ const llmController = async (req: Request, res: Response): Promise<void> => {
 
   const chatCompletion = await openai.createChatCompletion({
     model: "gpt-3.5-turbo",
-    messages: [{ role: "user", content: message }],
+    messages: [
+      prompt,
+      { role: ChatCompletionRequestMessageRoleEnum.User, content: message },
+    ],
   });
   res.send(chatCompletion.data.choices[0].message);
 };
