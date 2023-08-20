@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    environment:
+      - PORT=$PORT
+      - OPENAI_API_KEY=$OPENAI_API_KEY
+    ports:
+      - 8000:8000
