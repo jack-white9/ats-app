@@ -29,4 +29,4 @@ docker-compose up --build
 
 ### Usage
 
-The backend proivdes the `/api/get_llm` endpoint, which can be used via a `GET` request with a job description provided in the `message` query param.
+The backend proivdes the `/api/get_description_keywords` endpoint, which can be used via a `GET` request with a job description provided in the `message` query param.

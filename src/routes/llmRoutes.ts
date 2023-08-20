@@ -3,6 +3,6 @@ import llmController from "../controllers/llmController";
 
 const router = express.Router();
 
-router.get("/get_llm", llmController);
+router.get("/get_description_keywords", llmController);
 
 export default router;
