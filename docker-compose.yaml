@@ -9,4 +9,4 @@ services:
       - PORT=$PORT
       - OPENAI_API_KEY=$OPENAI_API_KEY
     ports:
-      - 80:5000
+      - 80:8000

@@ -6,7 +6,7 @@ import router from "./routes/llmRoutes";
 dotenv.config();
 
 const app: Express = express();
-const port: number = process.env.PORT ? parseInt(process.env.PORT) : 5000;
+const port: number = process.env.PORT ? parseInt(process.env.PORT) : 8000;
 
 app.use("/api", router);
 app.use(bp.json());
