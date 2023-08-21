@@ -17,7 +17,6 @@ This repo contains the backend to JobBuddy, a tool for generating keywords from 
 2. Create a `.env` file with the following contents:
 
 ```shell
-PORT = 8000
 OPENAI_API_KEY = 'ENTER YOUR API KEY'
 ```
 
